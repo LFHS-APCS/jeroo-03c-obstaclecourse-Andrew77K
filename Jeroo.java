@@ -44,16 +44,12 @@ public class Jeroo extends JerooBase {
           hop();
         }
 
-        hop();
+        
         if (isNet(AHEAD)){
-          turn(LEFT);
-          turn(LEFT);
-          hop();
+          
           turn(LEFT);
         } else if (isWater(AHEAD)){
-          turn(LEFT);
-          turn(LEFT);
-          hop();
+          
           turn(RIGHT);
         }
 
