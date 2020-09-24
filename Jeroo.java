@@ -22,6 +22,45 @@ public class Jeroo extends JerooBase {
      */
     public void runCourse() {
 
+        while (!isFlower(AHEAD)){
+          hop();
+        }
+
+        while (isFlower(AHEAD)){
+          hop();
+          pick();
+        }
+
+        while (!isNet(AHEAD)){
+          hop();
+        }
+
+        while (isNet(AHEAD)){
+          toss();
+          hop();
+        }
+
+        while (!isFlower(AHEAD)){
+          hop();
+        }
+
+        hop();
+        if (isNet(AHEAD)){
+          turn(LEFT);
+          turn(LEFT);
+          hop();
+          turn(LEFT);
+        } else if (isWater(AHEAD)){
+          turn(LEFT);
+          turn(LEFT);
+          hop();
+          turn(RIGHT);
+        }
+
+        while (!isWater(AHEAD)){
+          hop();
+        }
+
     }
 
     
